@@ -47,6 +47,13 @@ public class CardGroup{
         return c1.getSuit() == c2.getSuit() && c1.getSuit() == c3.getSuit();
     }
 
+    @Override
+    public String toString(){
+        return "card1:[" + this.c1.getNumber() + "," + this.c1.getSuit() + 
+                "],card2:[" + this.c2.getNumber() + "," + this.c2.getSuit() + 
+                "],card3:[" + this.c3.getNumber() + "," + this.c3.getSuit() + "]";
+    }
+
     public int compare(CardGroup c){
         if (this.ofSameSuit() && !c.ofSameSuit()) {
             return 1;

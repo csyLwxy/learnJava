@@ -37,19 +37,13 @@ public class Deck{
         CardGroup cg3 = deck.createRandomCardGroup();
 
         if (cg1.compare(cg2) >= 0 && cg1.compare(cg3) >= 0){
-            System.out.println("cg1: " + "card1:[" + cg1.getC1().getNumber() + "," + cg1.getC1().getSuit() + 
-            "],card2:[" + cg1.getC2().getNumber() + "," + cg1.getC2().getSuit() + 
-            "],card3:[" + cg1.getC3().getNumber() + "," + cg1.getC3().getSuit() + "]");
+            System.out.println("cg1: " + cg1);
         }
         if (cg2.compare(cg1) >= 0 && cg2.compare(cg3) >= 0){
-            System.out.println("cg2: " + "card1:[" + cg2.getC1().getNumber() + "," + cg2.getC1().getSuit() + 
-            "],card2:[" + cg2.getC2().getNumber() + "," + cg2.getC2().getSuit() + 
-            "],card3:[" + cg2.getC3().getNumber() + "," + cg2.getC3().getSuit() + "]");
+            System.out.println("cg2: " + cg2);
         }
         if (cg3.compare(cg1) >= 0 && cg3.compare(cg2) >= 0){
-            System.out.println("cg3: " + "card1:[" + cg3.getC1().getNumber() + "," + cg3.getC1().getSuit() + 
-            "],card2:[" + cg3.getC2().getNumber() + "," + cg3.getC2().getSuit() + 
-            "],card3:[" + cg3.getC3().getNumber() + "," + cg3.getC3().getSuit() + "]");
+            System.out.println("cg3: " + cg3);
         }
     }
 }
