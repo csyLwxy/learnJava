@@ -7,6 +7,10 @@ public class Employee extends Person{
     private double salary;
     private LocalDate hireDay;
     
+    public Employee(String name){
+        super(name);
+    }
+
     public Employee(String name, double salary, int year, int month, int day) {
         super(name);
         this.salary = salary;
