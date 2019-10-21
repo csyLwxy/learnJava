@@ -7,7 +7,8 @@ public class SimpleFrameTest {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             SimpleFrame frame = new SimpleFrame();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            // define what should happen when the user closes the application's frame
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
             frame.setVisible(true);
         });
     }
