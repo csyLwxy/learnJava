@@ -31,7 +31,7 @@ class SizedFrame extends JFrame {
 
         // set frame icon 
 
-        Image img = new ImageIcon("/home/wang/learnJava/sizedFrame/java.jpg").getImage();
+        Image img = new ImageIcon("./sizedFrame/java.jpg").getImage();
         setIconImage(img);
     }
 }
