@@ -1,3 +1,5 @@
+package homeworktest;
+
 import javax.swing.JFrame;
 import java.awt.*;
 
@@ -17,7 +19,7 @@ public class ToDoList extends JFrame{
  
          setSize(WINDOW_W, WINDOW_H);
          setLocation((screenWidth - WINDOW_W)/2, (screenHeight - WINDOW_H)/2);
-         //setLocationByPlatform(true);
+         setLocationByPlatform(true);
  
          // set frame icon 
  
