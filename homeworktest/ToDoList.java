@@ -1,29 +1,39 @@
 package homeworktest;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import java.awt.*;
 
-public class ToDoList extends JFrame{
+public class ToDoList extends JFrame {
     private static final int WINDOW_W = 400;
     private static final int WINDOW_H = 600;
 
     public ToDoList() {
-         // get screen dimension
 
-         Toolkit kit = Toolkit.getDefaultToolkit();
-         Dimension screenSize = kit.getScreenSize();
-         int screenHeight = screenSize.height;
-         int screenWidth = screenSize.width;
- 
-         // set frame width, height and let platform pick screen location
- 
-         setSize(WINDOW_W, WINDOW_H);
-         setLocation((screenWidth - WINDOW_W)/2, (screenHeight - WINDOW_H)/2);
-         setLocationByPlatform(true);
- 
-         // set frame icon 
- 
-         // Image img = new ImageIcon("./sizedFrame/java.jpg").getImage();
-         // setIconImage(img);
+        // set some default set
+        initSet();
+
+        // get screen dimension
+        GraphicsEnvironment environment = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        Rectangle rectangle = environment.getMaximumWindowBounds();
+        int screenHeight = rectangle.height;
+        int screenWidth = rectangle.width;
+
+        // set frame width, height and it's location
+        setSize(WINDOW_W, WINDOW_H);
+        setLocation((screenWidth - WINDOW_W)/2, (screenHeight - WINDOW_H)/2);
+
+        // set frame icon
+         Image img = new ImageIcon("./homeworktest/icon.png").getImage();
+         setIconImage(img);
+    }
+
+    public ToDoList(String title) {
+        this();
+        setTitle(title);
+    }
+
+    private void initSet() {
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 }
