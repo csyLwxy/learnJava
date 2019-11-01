@@ -9,8 +9,6 @@ public class FontTest {
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             JFrame frame = new FontFrame("FontTest");
-            // frame.setTitle("FontTest");
-            // frame.setVisible(true);
         });
     }
 }
@@ -19,15 +17,19 @@ public class FontTest {
  * A frame with a text message component
  */
 class FontFrame extends JFrame {
+    
     public FontFrame() {
         GraphicsEnvironment environment = GraphicsEnvironment.getLocalGraphicsEnvironment();
         Rectangle screenSize = environment.getMaximumWindowBounds();
         int x = screenSize.width;
         int y = screenSize.height;
         setLocation((x - 300) / 2, (y - 200) / 2);
+        
         add(new FontComponent());
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+        
         pack();
     }
 
@@ -41,6 +43,7 @@ class FontFrame extends JFrame {
  * A component that shows a centered message in a box
  */
 class FontComponent extends JComponent {
+    
     private static final int DEFAULT_WIDTH = 300;
     private static final int DEFAULT_HEIGHT = 200;
 
@@ -75,6 +78,7 @@ class FontComponent extends JComponent {
         Rectangle2D rect = new Rectangle2D.Double(x, y, bounds.getWidth(), bounds.getHeight());
         g2.draw(rect);
     }
+    
     public Dimension getPreferredSize() {
         return new Dimension(DEFAULT_WIDTH, DEFAULT_HEIGHT);
     }
