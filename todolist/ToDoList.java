@@ -1,3 +1,5 @@
+package todolist;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -107,6 +109,8 @@ public class ToDoList extends JFrame {
 
     frame.add(splitPane);
     frame.setSize(600,400);
+    Image img = new ImageIcon("./todolist/icon.pgn").getImage();
+    frame.setIconImage(img);
     frame.setLocationRelativeTo(null);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setVisible(true);
