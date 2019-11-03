@@ -131,7 +131,7 @@ public class ToDoList extends JFrame {
 		}
 	}
 
-	private void editTask(JFrame frame, DefaultTableModel model, int n) {
+	private void editTask(JFrame frame, DefaultTableModel model, int i) {
 		JPanel editPanel = new JPanel(new BorderLayout(5, 5));
 		JPanel editLabel = new JPanel(new GridLayout(0, 1, 2, 2));
 		editLabel.add(new JLabel("Title*", SwingConstants.RIGHT));
