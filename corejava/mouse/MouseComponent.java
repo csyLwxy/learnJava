@@ -77,12 +77,15 @@ public class MouseComponent extends JComponent {
     }
 
     private class MouseHandler extends MouseAdapter {
+        
+        @Override
         public void mousePressed(MouseEvent event) {
             // add a new square if the cursor isn't inside a square
             current = find(event.getPoint());
             if (current == null) add(event.getPoint());
         }
 
+        @Override
         public void mouseClicked(MouseEvent event) {
             // remove the currentt square if double clicked 
             current = find(event.getPoint());
@@ -91,6 +94,8 @@ public class MouseComponent extends JComponent {
     }
 
     private class MouseMotionHandler implements MouseMotionListener {
+        
+        @Override
         public void mouseMoved(MouseEvent event) {
             // set the mouse cursor to cross hairs if it is inside
             // a rectangle
@@ -101,17 +106,17 @@ public class MouseComponent extends JComponent {
                 setCursor(Cursor.getPredefinedCursor(Cursor.CROSSHAIR_CURSOR));
             }
         } 
-            public void mouseDragged(MouseEvent event) {
-                if (current != null) {
-                    int x = event.getX();
-                    int y = event.getY();
         
-                    // drag the current rectangle to center it at (x, y)
-                    current.setFrame(x - SIDELENGTH / 2, y - SIDELENGTH / 2, SIDELENGTH, SIDELENGTH);
-                    repaint();
-                }
+        @Override
+        public void mouseDragged(MouseEvent event) {
+            if (current != null) {
+                int x = event.getX();
+                int y = event.getY();
+    
+                // drag the current rectangle to center it at (x, y)
+                current.setFrame(x - SIDELENGTH / 2, y - SIDELENGTH / 2, SIDELENGTH, SIDELENGTH);
+                repaint();
             }
-    }
-
-   
+        }
+    }  
 }
