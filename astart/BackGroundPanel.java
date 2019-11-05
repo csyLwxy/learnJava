@@ -2,16 +2,16 @@ package astart;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;
- 
-public class BackGroundPanel extends JPanel{
- 
+
+public class BackGroundPanel extends JPanel {
+
 	private static final long serialVersionUID = 8195337324862727029L;
-	
-	public BackGroundPanel(){
+
+	public BackGroundPanel() {
 		this.setLayout(null);
 	}
-	
-	public void paintComponent(Graphics graphics){
+
+	public void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
 		graphics.drawLine(50, 0, 50, 700);
 		graphics.drawLine(100, 0, 100, 700);
@@ -29,7 +29,7 @@ public class BackGroundPanel extends JPanel{
 		graphics.drawLine(700, 0, 700, 700);
 		graphics.drawLine(750, 0, 750, 700);
 		graphics.drawLine(800, 0, 800, 700);
-		
+
 		graphics.drawLine(0, 50, 850, 50);
 		graphics.drawLine(0, 100, 850, 100);
 		graphics.drawLine(0, 150, 850, 150);
@@ -44,5 +44,5 @@ public class BackGroundPanel extends JPanel{
 		graphics.drawLine(0, 600, 850, 600);
 		graphics.drawLine(0, 650, 850, 650);
 	}
- 
+
 }
