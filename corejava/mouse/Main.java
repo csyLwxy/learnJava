@@ -8,8 +8,6 @@ public class Main {
         EventQueue.invokeLater(() -> {
             JFrame frame = new MouseFrame();
             frame.setTitle("MouseFrame");
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setVisible(true);
         });
     }
 }
