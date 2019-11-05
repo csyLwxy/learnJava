@@ -1,4 +1,4 @@
-package com.wxy.corejava;
+package corejava.com.wxy.corejava;
 
 // the classes in this file are part of this package
 
