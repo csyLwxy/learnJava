@@ -398,6 +398,4 @@ public class Game extends JPanel {
         Game.walls.clear();
         Game.missile.clear();
     }
-
-
 }
