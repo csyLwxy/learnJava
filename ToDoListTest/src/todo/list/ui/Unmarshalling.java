@@ -5,9 +5,6 @@
  */
 package todo.list.ui;
 
-import todo.list.ui.TaskDetails;
-import todo.list.ui.TaskList;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,18 +12,14 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-/**
- *
- * @author pradeep pannu
- */
 public class Unmarshalling {
  
     public List <TaskDetails> retriveFromXML (){
-        TaskList task_new= null;
+        TaskList task_new;
         String username = System.getProperty("user.name");
         
 	File file = new File("C:\\ToDoList\\taskdetails_"+username+".xml");
-        List <TaskDetails> task_list= new ArrayList<TaskDetails>();
+        List <TaskDetails> task_list= new ArrayList<>();
         try{
         JAXBContext jaxbContext = JAXBContext.newInstance(TaskList.class);
 	Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
@@ -37,7 +30,5 @@ public class Unmarshalling {
 		e.printStackTrace();
 	  }
         return task_list;
-
-	
     }
 }

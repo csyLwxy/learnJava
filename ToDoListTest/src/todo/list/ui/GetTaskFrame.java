@@ -5,12 +5,12 @@
  */
 package todo.list.ui;
 
-
+import javax.swing.JFrame;
 /**
  *
  * @author pradeep pannu
  */
-public class GetTaskFrame extends javax.swing.JFrame {
+public class GetTaskFrame extends JFrame {
 
     /**
      * Creates new form GetTaskFrame
@@ -252,7 +252,7 @@ public class GetTaskFrame extends javax.swing.JFrame {
            m_task.saveToXML(task_new);
            setVisible(false);
         //}
-    setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);      
+            setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
        }
        catch(Exception e){
        e.printStackTrace();}
@@ -266,36 +266,13 @@ public class GetTaskFrame extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GetTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GetTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GetTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GetTaskFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new GetTaskFrame().setVisible(true);
             }
         });
     }
+
     public static boolean isStringEmplty(String input){
         if(input !=null && input.length()==0)
         {return false;}

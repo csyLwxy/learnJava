@@ -5,7 +5,6 @@
  */
 package todo.list.ui;
 
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
@@ -16,15 +15,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import javax.swing.JButton;
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 
-/**
- *
- * @author pradeep pannu
- */
 public class MainFrame extends javax.swing.JFrame {
 
     /**
@@ -59,8 +53,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ToDoList_V2.0");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 102, 102));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFont(new java.awt.Font("Adobe Devanagari", 0, 10)); // NOI18N
@@ -297,7 +290,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29))
-            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -629,7 +622,7 @@ public class MainFrame extends javax.swing.JFrame {
             row [6]= sunday_tasks.get(i).getTask_link();
             row [7]= sunday_tasks.get(i).getTask_url();
             model.addRow(row);
-           }
+          }
  
     }//GEN-LAST:event_jButton7MouseClicked
 
@@ -660,30 +653,29 @@ public class MainFrame extends javax.swing.JFrame {
                    e1.printStackTrace();
                }
                
-            }
-            else
-                {
+            } else {
                     loc = (String) jTable2.getValueAt(selectedRow, 7);
-                if(!loc.isEmpty()){
-               // String loc1 = loc.replace("\\", "\\");
-                //System.out.println(loc);
-               try {
-                   int count=1;
-                   //Desktop.getDesktop().open(new File((String) jTable2.getValueAt(selectedRow, 3)));
-                   while(count>0){
-                   Process p = Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+loc);
-                   count--;
-//                    try {
-//                        p.waitFor();
-//                    } catch (InterruptedException ex) {
-//                        Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-//                    }
-//                   }
-                   } }catch (IOException e1) {
-                   e1.printStackTrace();
-               }
+                    if(!loc.isEmpty()){
+                           // String loc1 = loc.replace("\\", "\\");
+                            //System.out.println(loc);
+                           try {
+                               int count=1;
+                               //Desktop.getDesktop().open(new File((String) jTable2.getValueAt(selectedRow, 3)));
+                               while(count>0){
+                               Process p = Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler "+loc);
+                               count--;
+            //                    try {
+            //                        p.waitFor();
+            //                    } catch (InterruptedException ex) {
+            //                        Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            //                    }
+            //                   }
+                               }
+                           } catch (IOException e1) {
+                               e1.printStackTrace();
+                           }
                
-            }
+                    }
                 } 
                
             }
@@ -779,43 +771,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
-   
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-        
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

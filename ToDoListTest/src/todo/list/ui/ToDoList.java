@@ -4,18 +4,17 @@
  * and open the template in the editor.
  */
 package todo.list.ui;
-import todo.list.ui.*;
-/**
- *
- * @author pradeep pannu
- */
+
+import javax.swing.*;
+import  java.awt.EventQueue;
+
 public class ToDoList {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-      MainFrame.main(args);
+        EventQueue.invokeLater(() -> {
+            JFrame toDoList = new MainFrame();
+            toDoList.setTitle("ToDoList");
+            toDoList.setVisible(true);
+        });
     }
-    
 }

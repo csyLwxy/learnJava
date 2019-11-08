@@ -5,15 +5,9 @@
  */
 package todo.list.ui;
 
-
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author pradeep pannu
- */
 @XmlRootElement(name="TaskDetails")
 public class TaskDetails {
     
@@ -93,7 +87,8 @@ public class TaskDetails {
         this.task_day = task_day;
     }
 
-    public TaskDetails(String task_name, String task_type, String task_day, String task_link, String task_priority, String task_category, String task_sub_cat, String task_url) {
+    public TaskDetails(String task_name, String task_type, String task_day, String task_link,
+                       String task_priority, String task_category, String task_sub_cat, String task_url) {
         this.task_name = task_name;
         this.task_type = task_type;
         this.task_day = task_day;
@@ -103,6 +98,4 @@ public class TaskDetails {
         this.task_sub_cat = task_sub_cat;
         this.task_url = task_url;
     }
-    
-    
 }

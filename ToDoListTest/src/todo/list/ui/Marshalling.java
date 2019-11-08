@@ -13,10 +13,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-/**
- *
- * @author pradeep pannu
- */
 public class Marshalling  {
     public void saveToXML (TaskDetails task){
        String username = System.getProperty("user.name");
