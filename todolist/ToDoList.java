@@ -21,8 +21,8 @@ public class ToDoList extends JFrame {
 		table.setAutoCreateRowSorter(true);
 		table.setDragEnabled(true);
 
-		JPanel panel = new JPanel();
-		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		JPanel buttonPanel = new JPanel();
+		buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.Y_AXIS));
 
 		// 添加 “Add” 按键
 		JButton add = new JButton("Add");
@@ -30,8 +30,8 @@ public class ToDoList extends JFrame {
 		add.addActionListener(event -> {
 			addTask(this, model);
 		});
-		panel.add(Box.createVerticalGlue());
-		panel.add(add);
+		buttonPanel.add(Box.createVerticalGlue());
+		buttonPanel.add(add);
 
 		// 添加 “Edit” 按键
 		JButton edit = new JButton("Edit");
@@ -41,12 +41,12 @@ public class ToDoList extends JFrame {
 			if (row >= 0) {
 				editTask(this, model, row);
 			} else {
-				JOptionPane.showMessageDialog(panel, "You haven't chosen an entry to modify!", "Error",
+				JOptionPane.showMessageDialog(buttonPanel, "You haven't chosen an entry to modify!", "Error",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		});
-		panel.add(Box.createVerticalGlue());
-		panel.add(edit);
+		buttonPanel.add(Box.createVerticalGlue());
+		buttonPanel.add(edit);
 
 		// 添加 “Delete” 按键
 		JButton del = new JButton("Delete");
@@ -54,18 +54,18 @@ public class ToDoList extends JFrame {
 		del.addActionListener(event -> {
 			int row = table.getSelectedRow();
 			if (row >= 0) {
-				int delConfirm = JOptionPane.showConfirmDialog(panel, "Are you sure you want to delete this entry?",
+				int delConfirm = JOptionPane.showConfirmDialog(buttonPanel, "Are you sure you want to delete this entry?",
 						"Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 				if (delConfirm == 0) {
 					model.removeRow(row);
 				}
 			} else {
-				JOptionPane.showMessageDialog(panel, "You haven't chosen an entry to delete!", "Error",
+				JOptionPane.showMessageDialog(buttonPanel, "You haven't chosen an entry to delete!", "Error",
 						JOptionPane.ERROR_MESSAGE);
 			}
         });
-		panel.add(Box.createVerticalGlue());
-		panel.add(del);
+		buttonPanel.add(Box.createVerticalGlue());
+		buttonPanel.add(del);
 		
 		// 添加 “Help” 按键
 		JButton help = new JButton("Help");
@@ -75,10 +75,10 @@ public class ToDoList extends JFrame {
 						+ "-Delete an entry from the list by clicking on it and pressing the 'Delete' -button\n"
 						+ "-Reorganize the list by column by clicking on it in the list";
 		help.addActionListener(event -> {
-			JOptionPane.showMessageDialog(panel, helpMessage, "Help", JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog(buttonPanel, helpMessage, "Help", JOptionPane.PLAIN_MESSAGE);
 		});
-		panel.add(Box.createVerticalGlue());
-		panel.add(help);
+		buttonPanel.add(Box.createVerticalGlue());
+		buttonPanel.add(help);
 
 		// 添加 “Top” 按键
 		JButton top = new JButton("Top");
@@ -86,28 +86,28 @@ public class ToDoList extends JFrame {
 		top.addActionListener(event -> {
 			int row = table.getSelectedRow();
 			if (row > 0) {
-				int delConfirm = JOptionPane.showConfirmDialog(panel, "Are you sure you want to top this entry?",
+				int delConfirm = JOptionPane.showConfirmDialog(buttonPanel, "Are you sure you want to top this entry?",
 						"Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 				if (delConfirm == 0) {
 					model.moveRow(row, row, 0);
 				}
 			} else if (row == 0) {
-				JOptionPane.showMessageDialog(panel, "It has already be the top", "Error",
+				JOptionPane.showMessageDialog(buttonPanel, "It has already be the top", "Error",
 						JOptionPane.ERROR_MESSAGE);
 			} else {
-				JOptionPane.showMessageDialog(panel, "You haven't chosen an entry to delete!", "Error",
+				JOptionPane.showMessageDialog(buttonPanel, "You haven't chosen an entry to delete!", "Error",
 						JOptionPane.ERROR_MESSAGE);
 			}
 		});
-		panel.add(Box.createVerticalGlue());
-		panel.add(top);
+		buttonPanel.add(Box.createVerticalGlue());
+		buttonPanel.add(top);
 
-		panel.add(Box.createVerticalGlue());
+		buttonPanel.add(Box.createVerticalGlue());
 
-		JScrollPane scrollPane = new JScrollPane(table);
-		scrollPane.setBounds(0, 0, 880, 200);
+		JScrollPane tablePane = new JScrollPane(table);
+		tablePane.setBounds(0, 0, 880, 200);
 
-		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, panel);
+		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, tablePane, buttonPanel);
 
 		add(splitPane);
 		initSet();
@@ -166,28 +166,28 @@ public class ToDoList extends JFrame {
 	 * @param n
 	 */
 	private void editTask(JFrame frame, DefaultTableModel model, int n) {
+
 		JPanel editPanel = new JPanel(new BorderLayout(5, 5));
+
+		// 输入提示
 		JPanel editLabel = new JPanel(new GridLayout(0, 1, 2, 2));
-		editLabel.add(new JLabel("Title*", SwingConstants.RIGHT));
+		editLabel.add(new JLabel("Title", SwingConstants.RIGHT));
 		editLabel.add(new JLabel("Description", SwingConstants.RIGHT));
 		editLabel.add(new JLabel("Date", SwingConstants.RIGHT));
 		editLabel.add(new JLabel("Priority", SwingConstants.RIGHT));
 		editPanel.add(editLabel, BorderLayout.WEST);
 
-		JPanel editControls = new JPanel(new GridLayout(0, 1, 2, 2));
-		JTextField title = new JTextField();
-		title.setText(model.getValueAt(n, 0).toString());
-		editControls.add(title);
-		JTextField description = new JTextField();
-		description.setText(model.getValueAt(n, 1).toString());
-		editControls.add(description);
-		JTextField date = new JTextField();
-		date.setText(model.getValueAt(n, 2).toString());
-		editControls.add(date);
-		JTextField priority = new JTextField();
-		priority.setText(model.getValueAt(n, 3).toString());
-		editControls.add(priority);
-		editPanel.add(editControls, BorderLayout.CENTER);
+		// 设置编辑文本框
+		JPanel editTestFields = new JPanel(new GridLayout(0, 1, 2, 2));
+		JTextField title = new JTextField(model.getValueAt(n, 0).toString());
+		editTestFields.add(title);
+		JTextField description = new JTextField(model.getValueAt(n, 1).toString());
+		editTestFields.add(description);
+		JTextField date = new JTextField(model.getValueAt(n, 2).toString());
+		editTestFields.add(date);
+		JTextField priority = new JTextField(model.getValueAt(n, 3).toString());
+		editTestFields.add(priority);
+		editPanel.add(editTestFields, BorderLayout.CENTER);
 
 		int editConfirm = JOptionPane.showConfirmDialog(frame, editPanel, "Edit", JOptionPane.OK_CANCEL_OPTION,
 				JOptionPane.PLAIN_MESSAGE);
