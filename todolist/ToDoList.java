@@ -9,13 +9,9 @@ public class ToDoList extends JFrame {
 
 	private JPanel panel;
 
-	public static void main(String[] args) {
-        ToDoList todolist = new ToDoList();
-        todolist.setTitle("MyToDoList");
-	}
-
 	// ToDoList class
 	public ToDoList() {
+
 		JTable table = new JTable();
 		String[] columns = { "Title", "Description", "Date", "Priority" };
 		DefaultTableModel model = new DefaultTableModel();
@@ -62,11 +58,10 @@ public class ToDoList extends JFrame {
         
 		JButton help = new JButton("Help");
 		help.setAlignmentX(Component.CENTER_ALIGNMENT);
-        String helpStirng = "-Add new a new entry with 'Add' -button\n";
-        helpStirng += "-Edit an existing entry by clicking on it in the list and pressing the 'Edit' -button\n";
-        helpStirng += "-Delete an entry from the list by clicking on it and pressing the 'Delete' -button\n";
-        helpStirng += "-Reorganize the list by column by clicking on it in the list";
-        String helpMessage = helpStirng;
+		String helpMessage = "-Add new a new entry with 'Add' -button\n"
+						+ "-Edit an existing entry by clicking on it in the list and pressing the 'Edit' -button\n"
+						+ "-Delete an entry from the list by clicking on it and pressing the 'Delete' -button\n"
+						+ "-Reorganize the list by column by clicking on it in the list";
 		help.addActionListener(event -> {
 			JOptionPane.showMessageDialog(panel, helpMessage, "Help", JOptionPane.PLAIN_MESSAGE);
 		});
@@ -87,12 +82,6 @@ public class ToDoList extends JFrame {
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, panel);
 
 		add(splitPane);
-		setSize(600, 400);
-		setLocationRelativeTo(null);
-		Image image = new ImageIcon("./todolist/icon.png").getImage();
-		setIconImage(image);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
 	}
 
 	private void addTask(JFrame frame, DefaultTableModel model) {
@@ -131,7 +120,7 @@ public class ToDoList extends JFrame {
 		}
 	}
 
-	private void editTask(JFrame frame, DefaultTableModel model, int i) {
+	private void editTask(JFrame frame, DefaultTableModel model, int n) {
 		JPanel editPanel = new JPanel(new BorderLayout(5, 5));
 		JPanel editLabel = new JPanel(new GridLayout(0, 1, 2, 2));
 		editLabel.add(new JLabel("Title*", SwingConstants.RIGHT));
@@ -142,16 +131,16 @@ public class ToDoList extends JFrame {
 
 		JPanel editControls = new JPanel(new GridLayout(0, 1, 2, 2));
 		JTextField title = new JTextField();
-		title.setText(model.getValueAt(i, 0).toString());
+		title.setText(model.getValueAt(n, 0).toString());
 		editControls.add(title);
 		JTextField description = new JTextField();
-		description.setText(model.getValueAt(i, 1).toString());
+		description.setText(model.getValueAt(n, 1).toString());
 		editControls.add(description);
 		JTextField date = new JTextField();
-		date.setText(model.getValueAt(i, 2).toString());
+		date.setText(model.getValueAt(n, 2).toString());
 		editControls.add(date);
 		JTextField priority = new JTextField();
-		priority.setText(model.getValueAt(i, 3).toString());
+		priority.setText(model.getValueAt(n, 3).toString());
 		editControls.add(priority);
 		editPanel.add(editControls, BorderLayout.CENTER);
 
@@ -159,13 +148,26 @@ public class ToDoList extends JFrame {
 				JOptionPane.PLAIN_MESSAGE);
 		if (editConfirm == JOptionPane.OK_OPTION) {
 			if (!title.getText().isEmpty()) {
-				model.setValueAt(title.getText(), i, 0);
-				model.setValueAt(description.getText(), i, 1);
-				model.setValueAt(date.getText(), i, 2);
-				model.setValueAt(priority.getText(), i, 3);
+				model.setValueAt(title.getText(), n, 0);
+				model.setValueAt(description.getText(), n, 1);
+				model.setValueAt(date.getText(), n, 2);
+				model.setValueAt(priority.getText(), n, 3);
 			} else {
 				JOptionPane.showMessageDialog(editPanel, "Title is empty!", "Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
+
+		initSet();
+	}
+
+	private void initSet() {
+		setSize(600, 400);
+		setLocationRelativeTo(null);
+		Image image = new ImageIcon("./todolist/icon.png").getImage();
+		setIconImage(image);
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		setTitle("MyToDoList");
 	}
 }
