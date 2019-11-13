@@ -22,12 +22,16 @@ public class ToDoList extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
+		// 添加 “Add” 按键
 		JButton add = new JButton("Add");
 		add.setAlignmentX(Component.CENTER_ALIGNMENT);
 		add.addActionListener(event -> {
 			addTask(this, model);
 		});
+		panel.add(Box.createVerticalGlue());
+		panel.add(add);
 
+		// 添加 “Edit” 按键
 		JButton edit = new JButton("Edit");
 		edit.setAlignmentX(Component.CENTER_ALIGNMENT);
 		edit.addActionListener(event -> {
@@ -39,23 +43,29 @@ public class ToDoList extends JFrame {
 						JOptionPane.ERROR_MESSAGE);
 			}
 		});
+		panel.add(Box.createVerticalGlue());
+		panel.add(edit);
 
+		// 添加 “Delete” 按键
 		JButton del = new JButton("Delete");
 		del.setAlignmentX(Component.CENTER_ALIGNMENT);
 		del.addActionListener(event -> {
-			int i = table.getSelectedRow();
-			if (i >= 0) {
+			int row = table.getSelectedRow();
+			if (row >= 0) {
 				int delConfirm = JOptionPane.showConfirmDialog(panel, "Are you sure you want to delete this entry?",
 						"Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 				if (delConfirm == 0) {
-					model.removeRow(i);
+					model.removeRow(row);
 				}
 			} else {
 				JOptionPane.showMessageDialog(panel, "You haven't chosen an entry to delete!", "Error",
 						JOptionPane.ERROR_MESSAGE);
 			}
         });
-        
+		panel.add(Box.createVerticalGlue());
+		panel.add(del);
+		
+		// 添加 “Help” 按键
 		JButton help = new JButton("Help");
 		help.setAlignmentX(Component.CENTER_ALIGNMENT);
 		String helpMessage = "-Add new a new entry with 'Add' -button\n"
@@ -65,13 +75,6 @@ public class ToDoList extends JFrame {
 		help.addActionListener(event -> {
 			JOptionPane.showMessageDialog(panel, helpMessage, "Help", JOptionPane.PLAIN_MESSAGE);
 		});
-
-		panel.add(Box.createVerticalGlue());
-		panel.add(add);
-		panel.add(Box.createVerticalGlue());
-		panel.add(edit);
-		panel.add(Box.createVerticalGlue());
-		panel.add(del);
 		panel.add(Box.createVerticalGlue());
 		panel.add(help);
 		panel.add(Box.createVerticalGlue());
@@ -84,6 +87,11 @@ public class ToDoList extends JFrame {
 		add(splitPane);
 	}
 
+	/**
+	 * 添加task界面
+	 * @param frame
+	 * @param model
+	 */
 	private void addTask(JFrame frame, DefaultTableModel model) {
 		JPanel addPanel = new JPanel(new BorderLayout(5, 5));
 		JPanel addLabel = new JPanel(new GridLayout(0, 1, 2, 2));
@@ -120,6 +128,12 @@ public class ToDoList extends JFrame {
 		}
 	}
 
+	/**
+	 * 编辑task的界面
+	 * @param frame
+	 * @param model
+	 * @param n
+	 */
 	private void editTask(JFrame frame, DefaultTableModel model, int n) {
 		JPanel editPanel = new JPanel(new BorderLayout(5, 5));
 		JPanel editLabel = new JPanel(new GridLayout(0, 1, 2, 2));
@@ -160,6 +174,9 @@ public class ToDoList extends JFrame {
 		initSet();
 	}
 
+	/**
+	 * 一些默认的设置
+	 */
 	private void initSet() {
 		setSize(600, 400);
 		setLocationRelativeTo(null);
