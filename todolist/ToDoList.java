@@ -12,12 +12,14 @@ public class ToDoList extends JFrame {
 	// ToDoList class
 	public ToDoList() {
 
+		// 设置 todolist 表格的 title
 		JTable table = new JTable();
 		String[] columns = { "Title", "Description", "Date", "Priority" };
 		DefaultTableModel model = new DefaultTableModel();
 		model.setColumnIdentifiers(columns);
 		table.setModel(model);
 		table.setAutoCreateRowSorter(true);
+		table.setDragEnabled(true);
 
 		JPanel panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -35,9 +37,9 @@ public class ToDoList extends JFrame {
 		JButton edit = new JButton("Edit");
 		edit.setAlignmentX(Component.CENTER_ALIGNMENT);
 		edit.addActionListener(event -> {
-			int i = table.getSelectedRow();
-			if (i >= 0) {
-				editTask(this, model, i);
+			int row = table.getSelectedRow();
+			if (row >= 0) {
+				editTask(this, model, row);
 			} else {
 				JOptionPane.showMessageDialog(panel, "You haven't chosen an entry to modify!", "Error",
 						JOptionPane.ERROR_MESSAGE);
@@ -77,6 +79,29 @@ public class ToDoList extends JFrame {
 		});
 		panel.add(Box.createVerticalGlue());
 		panel.add(help);
+
+		// 添加 “Top” 按键
+		JButton top = new JButton("Top");
+		top.setAlignmentX(Component.CENTER_ALIGNMENT);
+		top.addActionListener(event -> {
+			int row = table.getSelectedRow();
+			if (row > 0) {
+				int delConfirm = JOptionPane.showConfirmDialog(panel, "Are you sure you want to top this entry?",
+						"Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+				if (delConfirm == 0) {
+					model.moveRow(row, row, 0);
+				}
+			} else if (row == 0) {
+				JOptionPane.showMessageDialog(panel, "It has already be the top", "Error",
+						JOptionPane.ERROR_MESSAGE);
+			} else {
+				JOptionPane.showMessageDialog(panel, "You haven't chosen an entry to delete!", "Error",
+						JOptionPane.ERROR_MESSAGE);
+			}
+		});
+		panel.add(Box.createVerticalGlue());
+		panel.add(top);
+
 		panel.add(Box.createVerticalGlue());
 
 		JScrollPane scrollPane = new JScrollPane(table);
@@ -85,6 +110,8 @@ public class ToDoList extends JFrame {
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scrollPane, panel);
 
 		add(splitPane);
+		initSet();
+		pack();
 	}
 
 	/**
@@ -93,24 +120,28 @@ public class ToDoList extends JFrame {
 	 * @param model
 	 */
 	private void addTask(JFrame frame, DefaultTableModel model) {
+
 		JPanel addPanel = new JPanel(new BorderLayout(5, 5));
+		
+		// 输入提示
 		JPanel addLabel = new JPanel(new GridLayout(0, 1, 2, 2));
-		addLabel.add(new JLabel("Title*", SwingConstants.RIGHT));
+		addLabel.add(new JLabel("Title", SwingConstants.RIGHT));
 		addLabel.add(new JLabel("Description", SwingConstants.RIGHT));
 		addLabel.add(new JLabel("Date", SwingConstants.RIGHT));
 		addLabel.add(new JLabel("Priority", SwingConstants.RIGHT));
 		addPanel.add(addLabel, BorderLayout.WEST);
 
-		JPanel addControls = new JPanel(new GridLayout(0, 1, 2, 2));
+		// 设置输入文本框
+		JPanel addTestFields = new JPanel(new GridLayout(0, 1, 2, 2));
 		JTextField title = new JTextField();
-		addControls.add(title);
+		addTestFields.add(title);
 		JTextField description = new JTextField();
-		addControls.add(description);
+		addTestFields.add(description);
 		JTextField date = new JTextField();
-		addControls.add(date);
+		addTestFields.add(date);
 		JTextField priority = new JTextField();
-		addControls.add(priority);
-		addPanel.add(addControls, BorderLayout.CENTER);
+		addTestFields.add(priority);
+		addPanel.add(addTestFields, BorderLayout.CENTER);
 
 		int addConfirm = JOptionPane.showConfirmDialog(frame, addPanel, "Add", JOptionPane.OK_CANCEL_OPTION,
 				JOptionPane.PLAIN_MESSAGE);
@@ -170,12 +201,10 @@ public class ToDoList extends JFrame {
 				JOptionPane.showMessageDialog(editPanel, "Title is empty!", "Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
-
-		initSet();
 	}
 
 	/**
-	 * 一些默认的设置
+	 * 一些框架默认的设置
 	 */
 	private void initSet() {
 		setSize(600, 400);
@@ -184,7 +213,7 @@ public class ToDoList extends JFrame {
 		setIconImage(image);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
 		setTitle("MyToDoList");
+		setVisible(true);
 	}
 }
