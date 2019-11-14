@@ -1,4 +1,4 @@
-package todolist;
+package todolist.tool;
 
 import javax.swing.*;
 import java.awt.*;

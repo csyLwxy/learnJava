@@ -1,5 +1,6 @@
 package astart;
 
+import astart.FangKuaiPosition;;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -146,5 +147,4 @@ public class AutoFindWay {
         h += Math.abs(currentFangKuai.getY() - targetFangKuai.getY());
         return h;
     }
-
 }
