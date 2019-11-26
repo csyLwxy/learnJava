@@ -15,7 +15,7 @@ public class MyPanel extends JPanel {
         this.setBounds(x * size, y * size, size, size);
     }
 
-    public MyPanel(FangKuaiPosition fk) {
-        this.setBounds(fk.getX() * size, fk.getY() * size, size, size);
+    public MyPanel(DiamondPosition diamondPosition) {
+        this.setBounds(diamondPosition.getX() * size, diamondPosition.getY() * size, size, size);
     }
 }

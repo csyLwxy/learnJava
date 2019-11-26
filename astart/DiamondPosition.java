@@ -1,6 +1,15 @@
 package astart;
 
 public class FangKuaiPosition {
+
+    static public final int size = 50;
+    private int x;
+    private int y;
+    private int F;
+    private int G;
+    private int H;
+    private FangKuaiPosition previousFK;
+    
     public FangKuaiPosition() {
     }
 
@@ -19,14 +28,6 @@ public class FangKuaiPosition {
         this.x = myPpanel.getX() / MyPanel.size;
         this.y = myPpanel.getY() / MyPanel.size;
     }
-
-    static public final int size = 50;
-    private int x;
-    private int y;
-    private int F;
-    private int G;
-    private int H;
-    private FangKuaiPosition previousFK;
 
     public int getF() {
         return F;
