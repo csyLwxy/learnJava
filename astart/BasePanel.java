@@ -25,9 +25,9 @@ public class BasePanel extends JFrame {
             ThreadLocalRandom.current().nextInt(heightLength));
     private final long sleepTime = 10;
 
-    public static List<FangKuaiPosition> zhangaiList = new ArrayList<>();
-    public static List<FangKuaiPosition> closedList = new ArrayList<>(); 
-    public static List<FangKuaiPosition> openList = new ArrayList<>(); 
+    public static List<DiamondPosition> zhangaiList = new ArrayList<>();
+    public static List<DiamondPosition> closedList = new ArrayList<>(); 
+    public static List<DiamondPosition> openList = new ArrayList<>(); 
 
     public BasePanel() {
         
@@ -49,7 +49,7 @@ public class BasePanel extends JFrame {
         bgp.add(fish);
 
         
-        for (FangKuaiPosition fk : zhangaiList) {
+        for (DiamondPosition fk : zhangaiList) {
             MyPanel panel = new MyPanel(fk);
             panel.setBackground(Color.gray);
             bgp.add(panel);
@@ -64,11 +64,11 @@ public class BasePanel extends JFrame {
         getZhangAiList();
         BasePanel bp = new BasePanel();
         AutoFindWay afw = new AutoFindWay();
-        List<FangKuaiPosition> wayList = afw.getWayLine(cat, fish);
+        List<DiamondPosition> wayList = afw.getWayLine(cat, fish);
         bp.movePanel(wayList);
     }
 
-    public void movePanel(List<FangKuaiPosition> wayList) throws InterruptedException {
+    public void movePanel(List<DiamondPosition> wayList) throws InterruptedException {
 
         if (wayList == null || wayList.size() == 0) {
             System.out.println("can't reach the target!");
@@ -76,7 +76,7 @@ public class BasePanel extends JFrame {
         }
 
         for (int i = wayList.size() - 2; i >= 0; i--) {
-            FangKuaiPosition fk = wayList.get(i);
+            DiamondPosition fk = wayList.get(i);
             // 向上
             while (cat.getY() > fk.getY() * MyPanel.size) {
                 cat.setBounds(cat.getX(), cat.getY() - 2, MyPanel.size, MyPanel.size);
@@ -111,7 +111,7 @@ public class BasePanel extends JFrame {
 
             int x = ThreadLocalRandom.current().nextInt(widthLength);
             int y = ThreadLocalRandom.current().nextInt(heightLength);
-            FangKuaiPosition fk = new FangKuaiPosition(x, y);
+            DiamondPosition fk = new DiamondPosition(x, y);
             
             if (zhangaiList.contains(fk)
                     || (cat.getX() == fk.getX() * MyPanel.size && cat.getY() == fk.getY() * MyPanel.size)
