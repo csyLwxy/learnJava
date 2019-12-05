@@ -1,24 +1,6 @@
 package astart;
 
-public class FangKuaiPosition {
-    public FangKuaiPosition() {
-    }
-
-    public FangKuaiPosition(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public FangKuaiPosition(int x, int y, FangKuaiPosition fk) {
-        this.x = x;
-        this.y = y;
-        this.previousFK = fk;
-    }
-
-    public FangKuaiPosition(MyPanel myPpanel) {
-        this.x = myPpanel.getX() / MyPanel.size;
-        this.y = myPpanel.getY() / MyPanel.size;
-    }
+public class DiamondPosition {
 
     static public final int size = 50;
     private int x;
@@ -26,7 +8,26 @@ public class FangKuaiPosition {
     private int F;
     private int G;
     private int H;
-    private FangKuaiPosition previousFK;
+    private DiamondPosition previousFK;
+
+    public DiamondPosition() {
+    }
+
+    public DiamondPosition(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public DiamondPosition(int x, int y, DiamondPosition fk) {
+        this.x = x;
+        this.y = y;
+        this.previousFK = fk;
+    }
+
+    public DiamondPosition(MyPanel myPanel) {
+        this.x = myPanel.getX() / MyPanel.size;
+        this.y = myPanel.getY() / MyPanel.size;
+    }
 
     public int getF() {
         return F;
@@ -52,17 +53,17 @@ public class FangKuaiPosition {
         H = h;
     }
 
-    public FangKuaiPosition getPreviousFK() {
+    public DiamondPosition getPreviousFK() {
         return previousFK;
     }
 
-    public void setPreviousFK(FangKuaiPosition previousFK) {
+    public void setPreviousFK(DiamondPosition previousFK) {
         this.previousFK = previousFK;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (((FangKuaiPosition) obj).getX() == this.x && ((FangKuaiPosition) obj).getY() == this.y) {
+        if (((DiamondPosition) obj).getX() == this.x && ((DiamondPosition) obj).getY() == this.y) {
             return true;
         } else {
             return false;

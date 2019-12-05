@@ -1,27 +1,20 @@
 package astart;
 
-import astart.FangKuaiPosition;
+import astart.DiamondPosition;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AutoFindWay {
-    public static FangKuaiPosition beginFk = null;
-    public static FangKuaiPosition endFk = null;
+    public static DiamondPosition beginFk = null;
+    public static DiamondPosition endFk = null;
 
-    public static void main(String[] args) {
-        AutoFindWay afw = new AutoFindWay();
-        MyPanel cat = new MyPanel(4, 6);
-        MyPanel fish = new MyPanel(10, 10);
-        afw.getWayLine(cat, fish);
-    }
+    public List<DiamondPosition> getWayLine(MyPanel cat, MyPanel fish) {
+        List<DiamondPosition> wayList = new ArrayList<>();
+        List<DiamondPosition> tmpList = null;
 
-    public List<FangKuaiPosition> getWayLine(MyPanel cat, MyPanel fish) {
-        List<FangKuaiPosition> wayList = new ArrayList<>();
-        List<FangKuaiPosition> tmpList = null;
-
-        beginFk = new FangKuaiPosition(cat);
+        beginFk = new DiamondPosition(cat);
         beginFk.setG(0);
-        endFk = new FangKuaiPosition(fish);
+        endFk = new DiamondPosition(fish);
 
 
         tmpList = aroundFk(beginFk);
@@ -31,7 +24,7 @@ public class AutoFindWay {
         BasePanel.openList.addAll(tmpList);
 
         for (int i = 0; i < BasePanel.openList.size(); i++) {
-            FangKuaiPosition tmpFk = BasePanel.openList.get(i);
+            DiamondPosition tmpFk = BasePanel.openList.get(i);
             tmpList = aroundFk(tmpFk);
 
             if (tmpList == null || tmpList.size() == 0) {
@@ -39,7 +32,7 @@ public class AutoFindWay {
             }
 
             if (tmpList.contains(endFk)) {
-                for (FangKuaiPosition obj : tmpList) {
+                for (DiamondPosition obj : tmpList) {
                     if (obj.equals(endFk)) {
                         BasePanel.closedList.add(obj);
                         break;
@@ -48,9 +41,9 @@ public class AutoFindWay {
                 break;
             }
 
-            for (FangKuaiPosition fk : tmpList) {
+            for (DiamondPosition fk : tmpList) {
                 if (BasePanel.openList.contains(fk)) {
-                    for (FangKuaiPosition openFk : BasePanel.openList) {
+                    for (DiamondPosition openFk : BasePanel.openList) {
                         if (openFk.equals(fk)) {
                             if (openFk.getG() > fk.getG()) {
                                 openFk.setG(fk.getG());
@@ -95,32 +88,32 @@ public class AutoFindWay {
     }
 
      
-    public List<FangKuaiPosition> aroundFk(FangKuaiPosition fk) {
+    public List<DiamondPosition> aroundFk(DiamondPosition fk) {
         if (fk.getX() == 10 && fk.getY() == 11) {
             System.out.println(".....");
         }
-        List<FangKuaiPosition> list = new ArrayList<FangKuaiPosition>();
+        List<DiamondPosition> list = new ArrayList<DiamondPosition>();
         if (fk.getY() - 1 >= 0) {
-            FangKuaiPosition tmpFk = new FangKuaiPosition(fk.getX(), fk.getY() - 1, fk);
+            DiamondPosition tmpFk = new DiamondPosition(fk.getX(), fk.getY() - 1, fk);
             if (!BasePanel.zhangaiList.contains(tmpFk) && !BasePanel.closedList.contains(tmpFk)) {
                 list.add(tmpFk);
             }
         }
 
         if (fk.getY() + 1 < BasePanel.heightLength) {
-            FangKuaiPosition tmpFk = new FangKuaiPosition(fk.getX(), fk.getY() + 1, fk);
+            DiamondPosition tmpFk = new DiamondPosition(fk.getX(), fk.getY() + 1, fk);
             if (!BasePanel.zhangaiList.contains(tmpFk) && !BasePanel.closedList.contains(tmpFk)) {
                 list.add(tmpFk);
             }
         }
         if (fk.getX() - 1 >= 0) {
-            FangKuaiPosition tmpFk = new FangKuaiPosition(fk.getX() - 1, fk.getY(), fk);
+            DiamondPosition tmpFk = new DiamondPosition(fk.getX() - 1, fk.getY(), fk);
             if (!BasePanel.zhangaiList.contains(tmpFk) && !BasePanel.closedList.contains(tmpFk)) {
                 list.add(tmpFk);
             }
         }
         if (fk.getX() + 1 < BasePanel.widthLength) {
-            FangKuaiPosition tmpFk = new FangKuaiPosition(fk.getX() + 1, fk.getY(), fk);
+            DiamondPosition tmpFk = new DiamondPosition(fk.getX() + 1, fk.getY(), fk);
             if (!BasePanel.zhangaiList.contains(tmpFk) && !BasePanel.closedList.contains(tmpFk)) {
                 list.add(tmpFk);
             }
@@ -131,9 +124,9 @@ public class AutoFindWay {
         return list;
     }
 
-    public void getFGH(List<FangKuaiPosition> list, FangKuaiPosition currFk) {
+    public void getFGH(List<DiamondPosition> list, DiamondPosition currFk) {
         if (list != null && list.size() > 0) {
-            for (FangKuaiPosition fk : list) {
+            for (DiamondPosition fk : list) {
                 fk.setG(currFk.getG() + 1);
                 fk.setH(toGetH(fk, endFk));
                 fk.setF(fk.getG() + fk.getH());
@@ -141,7 +134,7 @@ public class AutoFindWay {
         }
     }
 
-    public int toGetH(FangKuaiPosition currentFangKuai, FangKuaiPosition targetFangKuai) {
+    public int toGetH(DiamondPosition currentFangKuai, DiamondPosition targetFangKuai) {
         int h = 0;
         h += Math.abs(currentFangKuai.getX() - targetFangKuai.getX());
         h += Math.abs(currentFangKuai.getY() - targetFangKuai.getY());
