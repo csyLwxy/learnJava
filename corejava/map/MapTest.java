@@ -1,8 +1,8 @@
-package map;
+package corejava.map;
 
 import java.util.*;
 
-import abstractClasses.Employee;
+import corejava.abstractClasses.Employee;
 
 public class MapTest{
     public static void main(String[] args) {

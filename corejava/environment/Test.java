@@ -1,4 +1,4 @@
-package environment;
+package corejava.environment;
 
 import java.awt.GraphicsEnvironment;
 

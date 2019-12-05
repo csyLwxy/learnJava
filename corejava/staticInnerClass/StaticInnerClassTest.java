@@ -1,4 +1,4 @@
-package staticInnerClass;
+package corejava.staticInnerClass;
 
 public class StaticInnerClassTest{
     public static void main(String[] args) {

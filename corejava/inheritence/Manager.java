@@ -1,4 +1,4 @@
-package inheritence;
+package corejava.inheritence;
 
 public class Manager extends Employee{
     private double bonus;

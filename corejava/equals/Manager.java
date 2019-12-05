@@ -1,4 +1,4 @@
-package equals;
+package corejava.equals;
 
 public class Manager extends Employee{
     private double bonus;

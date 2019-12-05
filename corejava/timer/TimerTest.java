@@ -1,4 +1,4 @@
-package timer;
+package corejava.timer;
 
 import java.awt.*;
 import java.awt.event.*;

@@ -1,4 +1,4 @@
-package simpleframe;
+package corejava.simpleframe;
 
 import java.awt.*;
 import javax.swing.*;

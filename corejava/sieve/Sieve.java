@@ -1,4 +1,4 @@
-package sieve;
+package corejava.sieve;
 
 import java.util.*;
 

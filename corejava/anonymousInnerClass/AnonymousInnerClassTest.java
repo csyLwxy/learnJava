@@ -1,4 +1,4 @@
-package anonymousInnerClass;
+package corejava.anonymousInnerClass;
 
 import java.awt.*;
 import java.awt.event.*;

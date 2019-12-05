@@ -1,8 +1,7 @@
-package notHelloWorld;
+package corejava.notHelloWorld;
 
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.plaf.DimensionUIResource;
 
 public class NotHelloWorld {
     public static void main(String[] args) {

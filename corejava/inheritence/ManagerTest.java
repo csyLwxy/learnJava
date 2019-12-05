@@ -1,4 +1,4 @@
-package inheritence;
+package corejava.inheritence;
 
 /**
  * This program demonstrates inheritance

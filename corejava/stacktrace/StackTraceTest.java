@@ -1,4 +1,4 @@
-package stacktrace;
+package corejava.stacktrace;
 import java.util.*;
 
 /**

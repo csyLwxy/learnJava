@@ -1,4 +1,4 @@
-package abstractClasses;
+package corejava.abstractClasses;
 
 public class Student extends Person{
 

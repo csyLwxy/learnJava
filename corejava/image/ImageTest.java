@@ -1,4 +1,4 @@
-package image;
+package corejava.image;
 
 import java.awt.*;
 import javax.swing.*;

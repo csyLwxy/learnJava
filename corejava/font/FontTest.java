@@ -1,4 +1,4 @@
-package font;
+package corejava.font;
 
 import java.awt.*;
 import java.awt.font.*;

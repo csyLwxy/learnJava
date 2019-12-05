@@ -1,6 +1,6 @@
 package astart;
 
-import astart.FangKuaiPosition;;
+import astart.FangKuaiPosition;
 import java.util.ArrayList;
 import java.util.List;
 

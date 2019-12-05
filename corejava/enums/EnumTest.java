@@ -1,4 +1,4 @@
-package enums;
+package corejava.enums;
 
 import java.util.*;
 

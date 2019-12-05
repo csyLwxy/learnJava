@@ -1,4 +1,4 @@
-package shuffle;
+package corejava.shuffle;
 
 import  java.util.*;
 

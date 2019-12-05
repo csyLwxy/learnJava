@@ -1,4 +1,4 @@
-package abstractClasses;
+package corejava.abstractClasses;
 
 public abstract class Person{
     public abstract String getDescription();

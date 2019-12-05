@@ -1,4 +1,4 @@
-package lambda;
+package corejava.lambda;
 
 import java.util.*;
 import javax.swing.*;

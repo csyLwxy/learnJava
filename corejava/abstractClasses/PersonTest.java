@@ -1,4 +1,4 @@
-package abstractClasses;
+package corejava.abstractClasses;
 
 public class PersonTest{
     public static void main(String[] args){

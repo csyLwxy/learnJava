@@ -1,4 +1,4 @@
-package linkedlist;
+package corejava.linkedlist;
 import java.util.*;
 
 public class LinkedListTest{

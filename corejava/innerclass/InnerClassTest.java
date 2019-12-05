@@ -1,4 +1,4 @@
-package innerclass;
+package corejava.innerclass;
 
 import java.awt.*;
 import java.awt.event.*;

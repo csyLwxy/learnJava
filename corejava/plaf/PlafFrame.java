@@ -1,4 +1,4 @@
-package plaf;
+package corejava.plaf;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

@@ -1,4 +1,4 @@
-package objectAnalyzer;
+package corejava.objectAnalyzer;
 
 import java.util.ArrayList;
 

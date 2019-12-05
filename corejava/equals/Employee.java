@@ -1,4 +1,4 @@
-package equals;
+package corejava.equals;
 
 import java.time.*;
 import java.util.Objects;

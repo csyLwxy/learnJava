@@ -1,4 +1,4 @@
-package button;
+package corejava.button;
 
 import java.awt.*;
 import javax.swing.*;

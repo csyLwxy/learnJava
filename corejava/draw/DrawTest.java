@@ -1,4 +1,4 @@
-package draw;
+package corejava.draw;
 
 import java.awt.*;
 import javax.swing.*;

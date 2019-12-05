@@ -1,4 +1,4 @@
-package objectAnalyzer;
+package corejava.objectAnalyzer;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Array;

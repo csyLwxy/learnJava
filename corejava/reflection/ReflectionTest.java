@@ -1,4 +1,4 @@
-package reflection;
+package corejava.reflection;
 
 import java.util.*;
 import java.lang.reflect.*;
