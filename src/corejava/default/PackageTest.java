@@ -1,4 +1,6 @@
-import com.wxy.corejava.Employee;
+package corejava.test;
+
+import corejava.com.wxy.corejava.Employee;
 // the Employee class is defined in that packag
 
 import static java.lang.System.*;

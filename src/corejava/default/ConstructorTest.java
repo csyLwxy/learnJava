@@ -1,3 +1,5 @@
+package corejava.com.wxy.corejava;
+
 import java.util.*;
 
 public class ConstructorTest{
