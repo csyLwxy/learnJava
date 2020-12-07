@@ -39,7 +39,6 @@ public class BasePanel extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
 
-        
         cat.setBackground(Color.green);
         
         fish.setBackground(Color.red);
