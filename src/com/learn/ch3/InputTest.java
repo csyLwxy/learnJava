@@ -1,8 +1,9 @@
-package com.learn;
+package com.learn.ch3;
 import java.util.Scanner;
 
 /**
  * This program demonstrates console input
+ * @author HP
  */
 public class InputTest {
     public static void main(String[] args) {
