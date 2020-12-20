@@ -1,4 +1,4 @@
-package com.learn.ch3;
+package com.learn.corejava.ch3;
 
 /**
  * This program demonstrates a triangular array

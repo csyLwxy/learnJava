@@ -1,6 +1,4 @@
-package com.learn.ch4;
-
-import java.time.*;
+package com.learn.corejava.ch4;
 
 /**
  * This program tests the Employee class

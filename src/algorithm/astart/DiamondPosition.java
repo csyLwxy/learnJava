@@ -1,4 +1,4 @@
-package astart;
+package algorithm.astart;
 
 public class DiamondPosition {
 

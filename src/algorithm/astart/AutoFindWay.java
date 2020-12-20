@@ -1,6 +1,5 @@
-package astart;
+package algorithm.astart;
 
-import astart.DiamondPosition;
 import java.util.ArrayList;
 import java.util.List;
 

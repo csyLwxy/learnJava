@@ -1,4 +1,4 @@
-package astart;
+package algorithm.astart;
 
 import java.awt.Graphics;
 import javax.swing.JPanel;

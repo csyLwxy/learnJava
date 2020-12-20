@@ -1,6 +1,4 @@
-package com.learn.ch4;
-
-import java.util.*;
+package com.learn.corejava.ch4;
 
 /**
  * This program demonstrates object construction
