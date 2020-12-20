@@ -1,6 +1,7 @@
 package com.learn.corejava.ch4;
 
 import java.time.LocalDate;
+import java.util.Objects;
 import java.util.Random;
 
 public class Employee {
@@ -74,5 +75,42 @@ public class Employee {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object otherObject) {
+        // a quick test to see if the objects are identical
+        if (this == otherObject) {
+            return true;
+        }
+
+        // must return false if the explicit parameter is null
+        if (otherObject == null) {
+            return false;
+        }
+
+        // if the classes don't match they can't be equal
+        if (getClass() != otherObject.getClass()) {
+            return false;
+        }
+
+        // now we know otherObject is a non-null Employee
+        Employee other = (Employee) otherObject;
+
+        // test whether the fields have identical value
+        return Objects.equals(name, other.name)
+                && salary == other.salary
+                && id == other.id
+                && Objects.equals(hireDay, other.hireDay);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, salary, id, hireDay);
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getName() + "[name=" + name + ",salary=" + salary + ",hireday=" + hireDay + "]";
     }
 }
