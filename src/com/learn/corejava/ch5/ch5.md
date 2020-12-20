@@ -40,8 +40,8 @@ public class Manager extends Employee {
     }  
 }
 ```
->我们需要返回 salary 和 bonus 的和，然而，**Manager 的 getSalary 方法
->不能直接地访问超类的私有域。**只能通过父类暴露出来的公共接口访问。
+>我们需要返回 salary 和 bonus 的和，然而，Manager 的 getSalary 方法
+>不能直接地访问超类的私有域。只能通过父类暴露出来的公共接口访问。
 >
 >为此，可以使用特定的关键字 super 解决这个问题。
 ```java
@@ -151,3 +151,62 @@ java语言规范要求 equals 方法具有下面的特征：
 >散列码(hash code)是由对象导出的一个整型值。
 >如果重新定义 equals 方法，就必须重新定义 hashCode 方法.
 >如果 x.equals(y)返回 true，那么 x.hashCode() 就必须与 y.hashCode() 具有相同的值。
+
+## 对象包装器与自动装箱
+>所有的基本类型都有一个与之对应的类。例如，Integer 类对应基本类型 int。
+>通常，这些类称为包装器(wrapper)。
+>
+>对象包装器类是不可变的，即一旦构造了包装器，就不允许更改包装器在其中的值。
+>同时，对象包装器类还是 final，因此不能定义它们的子类。
+
+我们可以申请一个 Integer 对象的数组列表
+`ArrayList<Integer> list = new ArrayList<>();`
+
+可以使用   `list.add(1);`   向 list 中添加元素
+
+它将自动地变换成    `list.add(Integer.valueOf(1));`
+
+这种变换被称为*自动装箱(autoboxing)*
+
+相反地，当将一个 Integer 对象赋给一个 int 值时，将会自动地拆箱。
+
+如 `int n = list.get(i);`
+
+翻译成 `int n = list.get(i).intValue();`
+
+>装箱和拆箱时编译器认可的，而不是虚拟机。
+
+## 枚举类
+>在比较两个枚举类型的值时，永远不需要调用 equals，而直接使用 “==” 就可以了。
+
+## 反射
+能够分析类能力的程序称为反射(reflective)。反射机制可以用来:
+- 在运行时分析类的能力。
+- 在运行时查看对象，例如，编写一个 toString 方法供所有类使用。
+- 实现通用的数组操作代码。
+- 利用 Method 对象，这个对象很想 C++ 中的函数指针。
+
+### Class 类
+>在程序运行期间，Java运行时系统始终为所有的对象维护一个被称为*运行时*的类型标志(runtime type identification)。
+>这个信息跟踪着每个对象所属的类。虚拟机利用运行时类型信息选择相应的方法执行。
+
+Class 类是保存这些信息的类。
+- 一个 Class 对象表示一个特定类的属性。
+- 使用 getClass() 方法将会返回一个 Class 类型的实例。
+- 使用 Class 对象的 getName() 方法将返回类的名字。
+- 调用静态方法 Class.forName(className) 将获得类名对应的 Class 对象。
+    其中，className 必须是类名或接口名才能够执行，否则会抛出一个 checked exception
+- 如果 T 是任意的 Java 类型(或 void 关键字)，T.class 将代表匹配的类对象。
+- 使用 Class 对象的 newInstance() 方法可以动态的创建一个类的实例。
+
+### 利用反射分析类的能力
+>在 java.lang.reflect 包中有三个类 Field、Method 和 Constructor 分别用于描述类的域、方法和构造器。
+
+## 继承的设计技巧
+1. 将公共操作和域放在超类
+2. 不要使用受保护的域
+3. 使用继承实现 “ is-a ” 关系
+4. 除非所有继承的方法都有意义，否则不要使用继承
+5. 在覆盖方法时，不要改变预期的行为
+6. 使用多态，而非类型信息
+7. 不要过多地使用反射
