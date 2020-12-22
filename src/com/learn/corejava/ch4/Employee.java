@@ -4,7 +4,10 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Random;
 
-public class Employee {
+/**
+ * @author HP
+ */
+public class Employee implements Comparable<Employee>, Cloneable {
     private static int nextId = 1;
 
     private String name = "";
@@ -112,5 +115,10 @@ public class Employee {
     @Override
     public String toString() {
         return getClass().getName() + "[name=" + name + ",salary=" + salary + ",hireday=" + hireDay + "]";
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return Double.compare(salary, o.salary);
     }
 }
