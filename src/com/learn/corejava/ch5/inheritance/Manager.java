@@ -3,6 +3,10 @@ package com.learn.corejava.ch5.inheritance;
 import com.learn.corejava.ch4.Employee;
 
 public class Manager extends Employee {
+    public double getBonus() {
+        return bonus;
+    }
+
     private double bonus;
     /**
      * @param name the employee's name
