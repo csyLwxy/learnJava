@@ -1,4 +1,4 @@
-package com.learn.corejava.ch4;
+package com.learn.corejava.VolumeⅠ.ch4;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -37,6 +37,10 @@ public class Employee implements Comparable<Employee>, Cloneable {
     public Employee(double s) {
         // calls the Employee(String, double) constructor
         this("Employee #" + nextId, s);
+    }
+
+    public Employee(String name) {
+        this.name = name;
     }
 
     public Employee(String n, double s) {
