@@ -13,64 +13,69 @@ public class DiamondPosition {
     public DiamondPosition() {
     }
 
-    public DiamondPosition(int x, int y) {
+    DiamondPosition(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public DiamondPosition(int x, int y, DiamondPosition fk) {
+    DiamondPosition(int x, int y, DiamondPosition fk) {
         this.x = x;
         this.y = y;
         this.previousFK = fk;
     }
 
-    public DiamondPosition(MyPanel myPanel) {
-        this.x = myPanel.getX() / MyPanel.size;
-        this.y = myPanel.getY() / MyPanel.size;
+    DiamondPosition(MyPanel myPanel) {
+        this.x = myPanel.getX() / MyPanel.SIZE;
+        this.y = myPanel.getY() / MyPanel.SIZE;
     }
 
     public int getF() {
         return F;
     }
 
-    public void setF(int f) {
+    void setF(int f) {
         F = f;
     }
 
-    public int getG() {
+    int getG() {
         return G;
     }
 
-    public void setG(int g) {
+    void setG(int g) {
         G = g;
     }
 
-    public int getH() {
+    int getH() {
         return H;
     }
 
-    public void setH(int h) {
+    void setH(int h) {
         H = h;
     }
 
-    public DiamondPosition getPreviousFK() {
+    DiamondPosition getPreviousFK() {
         return previousFK;
     }
 
-    public void setPreviousFK(DiamondPosition previousFK) {
+    void setPreviousFK(DiamondPosition previousFK) {
         this.previousFK = previousFK;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (((DiamondPosition) obj).getX() == this.x && ((DiamondPosition) obj).getY() == this.y) {
+        if (this == obj) {
             return true;
-        } else {
+        }
+        if (obj == null) {
             return false;
         }
+        if (!(obj instanceof DiamondPosition)) {
+            return false;
+        }
+        return ((DiamondPosition) obj).getX() == this.x && ((DiamondPosition) obj).getY() == this.y;
     }
 
-    public int getX() {
+    int getX() {
         return x;
     }
 
@@ -78,7 +83,7 @@ public class DiamondPosition {
         this.x = x;
     }
 
-    public int getY() {
+    int getY() {
         return y;
     }
 

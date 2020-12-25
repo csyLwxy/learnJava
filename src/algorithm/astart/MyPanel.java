@@ -2,20 +2,23 @@ package algorithm.astart;
 
 import javax.swing.JPanel;
 
+/**
+ * @author web
+ */
 public class MyPanel extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
-    public final static int size = 50;
+    final static int SIZE = 50;
 
     public MyPanel() {
     }
 
-    public MyPanel(int x, int y) {
-        this.setBounds(x * size, y * size, size, size);
+    MyPanel(int x, int y) {
+        this.setBounds(x * SIZE, y * SIZE, SIZE, SIZE);
     }
 
-    public MyPanel(DiamondPosition diamondPosition) {
-        this.setBounds(diamondPosition.getX() * size, diamondPosition.getY() * size, size, size);
+    MyPanel(DiamondPosition diamondPosition) {
+        this.setBounds(diamondPosition.getX() * SIZE, diamondPosition.getY() * SIZE, SIZE, SIZE);
     }
 }

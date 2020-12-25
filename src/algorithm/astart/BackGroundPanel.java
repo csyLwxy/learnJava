@@ -7,10 +7,11 @@ public class BackGroundPanel extends JPanel {
 
 	private static final long serialVersionUID = 8195337324862727029L;
 
-	public BackGroundPanel() {
+	BackGroundPanel() {
 		this.setLayout(null);
 	}
 
+	@Override
 	public void paintComponent(Graphics graphics) {
 		super.paintComponent(graphics);
 		graphics.drawLine(50, 0, 50, 700);
@@ -44,5 +45,4 @@ public class BackGroundPanel extends JPanel {
 		graphics.drawLine(0, 600, 850, 600);
 		graphics.drawLine(0, 650, 850, 650);
 	}
-
 }
