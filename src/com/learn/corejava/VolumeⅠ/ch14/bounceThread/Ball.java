@@ -1,10 +1,13 @@
-package com.learn.corejava.VolumeⅠ.ch14.bounce;
-import java.awt.geom.*;
+package com.learn.corejava.VolumeⅠ.ch14.bounceThread;
+
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
 
 /**
  * A ball that moves and bounces off the edges of a rectangle
- * @version 1.33 2007-05-17
+ *
  * @author Cay Horstmann
+ * @version 1.33 2007-05-17
  */
 class Ball {
     private static final int X_SIZE = 15;
@@ -13,6 +16,7 @@ class Ball {
     private double y = 0;
     private double dx = 1;
     private double dy = 1;
+
     /**
      * Moves the ball to the next position, reversing direction if it hits one of the edges
      */

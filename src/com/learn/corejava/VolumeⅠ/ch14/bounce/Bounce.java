@@ -9,15 +9,11 @@ import javax.swing.*;
  * @version 1.33 2007-05-17
  * @author Cay Horstmann
  */
-public class Bounce
-{
-    public static void main(String[] args)
-    {
-        EventQueue.invokeLater(new Runnable()
-        {
+public class Bounce {
+    public static void main(String[] args) {
+        EventQueue.invokeLater(new Runnable() {
             @Override
-            public void run()
-            {
+            public void run() {
                 JFrame frame = new BounceFrame();
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setVisible(true);
@@ -29,32 +25,33 @@ public class Bounce
 /**
  * The frame with ball component and buttons.
  */
-class BounceFrame extends JFrame
-{
+class BounceFrame extends JFrame {
+    private BallComponent comp;
+    private static final int DEFAULT_WIDTH = 450;
+    private static final int DEFAULT_HEIGHT = 350;
+    private static final int STEPS = 1000;
+    private static final int DELAY = 3;
     /**
      * Constructs the frame with the component for showing the bouncing ball and Start and Close
      * buttons
      */
-    public BounceFrame()
-    {
+    BounceFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setTitle("Bounce");
 
         comp = new BallComponent();
         add(comp, BorderLayout.CENTER);
         JPanel buttonPanel = new JPanel();
-        addButton(buttonPanel, "Start", new ActionListener()
-        {
-            public void actionPerformed(ActionEvent event)
-            {
+        addButton(buttonPanel, "Start", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
                 addBall();
             }
         });
 
-        addButton(buttonPanel, "Close", new ActionListener()
-        {
-            public void actionPerformed(ActionEvent event)
-            {
+        addButton(buttonPanel, "Close", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent event) {
                 System.exit(0);
             }
         });
@@ -67,8 +64,7 @@ class BounceFrame extends JFrame
      * @param title the button title
      * @param listener the action listener for the button
      */
-    public void addButton(Container c, String title, ActionListener listener)
-    {
+    private void addButton(Container c, String title, ActionListener listener) {
         JButton button = new JButton(title);
         c.add(button);
         button.addActionListener(listener);
@@ -77,28 +73,17 @@ class BounceFrame extends JFrame
     /**
      * Adds a bouncing ball to the panel and makes it bounce 1,000 times.
      */
-    public void addBall()
-    {
-        try
-        {
+    private void addBall() {
+        try {
             Ball ball = new Ball();
             comp.add(ball);
 
-            for (int i = 1; i <= STEPS; i++)
-            {
+            for (int i = 1; i <= STEPS; i++) {
                 ball.move(comp.getBounds());
                 comp.paint(comp.getGraphics());
                 Thread.sleep(DELAY);
             }
-        }
-        catch (InterruptedException e)
-        {
+        } catch (InterruptedException ignored) {
         }
     }
-
-    private BallComponent comp;
-    public static final int DEFAULT_WIDTH = 450;
-    public static final int DEFAULT_HEIGHT = 350;
-    public static final int STEPS = 1000;
-    public static final int DELAY = 3;
 }
