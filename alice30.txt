@@ -1,0 +1,386 @@
+***This is the Project Gutenberg Etext of Alice in Wonderland***
+*This 30th edition should be labeled alice30.txt or alice30.zip.
+***This Edition Is Being Officially Released On March 8, 1994***
+**In Celebration Of The 23rd Anniversary of Project Gutenberg***
+
+
+Please take a look at the important information in this header.
+We encourage you to keep this file on your own disk, keeping an
+electronic path open for the next readers.  Do not remove this.
+
+
+**Welcome To The World of Free Plain Vanilla Electronic Texts**
+
+**Etexts Readable By Both Humans and By Computers, Since 1971**
+
+*These Etexts Prepared By Hundreds of Volunteers and Donations*
+
+Information on contacting Project Gutenberg to get Etexts, and
+further information is included below.  We need your donations.
+
+
+Alice's Adventures in Wonderland
+
+March, 1994  [Etext #11]
+[Originally released in January, 1991]
+
+
+*****The Project Gutenberg Etext of Alice In Wonderland*****
+******This file should be named alice30.txt or alice30.zip******
+
+Corrected EDITIONS of our etexts get a new NUMBER, alice31.txt
+VERSIONS based on separate sources get new LETTER, alice30a.txt
+
+
+We are now trying to release all our books one month in advance
+of the official release dates, for time for better editing.  We
+have this as a goal to accomplish by the end of the year but we
+cannot guarantee to stay that far ahead every month after that.
+
+Please note:  neither this list nor its contents are final till
+midnight of the last day of the month of any such announcement.
+The official release date of all Project Gutenberg Etexts is at
+Midnight, Central Time, of the last day of the stated month.  A
+preliminary version may often be posted for suggestion, comment
+and editing by those who wish to do so.  To be sure you have an
+up to date first edition [xxxxx10x.xxx] please check file sizes
+in the first week of the next month.  Since our ftp program has
+a bug in it that scrambles the date [tried to fix and failed] a
+look at the file size will have to do, but we will try to see a
+new copy has at least one byte more or less.
+
+
+Information about Project Gutenberg (one page)
+
+We produce about two million dollars for each hour we work.  The
+fifty hours is one conservative estimate for how long it we take
+to get any etext selected, entered, proofread, edited, copyright
+searched and analyzed, the copyright letters written, etc.  This
+projected audience is one hundred million readers.  If our value
+per text is nominally estimated at one dollar then we produce $4
+million dollars per hour this year as we release some eight text
+files per month:  thus upping our productivity from $2 million.
+
+The Goal of Project Gutenberg is to Give Away One Trillion Etext
+Files by the December 31, 2001.  [10,000 x 100,000,000=Trillion]
+This is ten thousand titles each to one hundred million readers,
+which is 10% of the expected number of computer users by the end
+of the year 2001.
+
+We need your donations more than ever!
+
+All donations should be made to "Project Gutenberg/IBC", and are
+tax deductible to the extent allowable by law ("IBC" is Illinois
+Benedictine College).  (Subscriptions to our paper newsletter go
+to IBC, too)
+
+For these and other matters, please mail to:
+
+Project Gutenberg
+P. O. Box  2782
+Champaign, IL 61825
+
+When all other email fails try our Michael S. Hart, Executive
+Director:
+hart@vmd.cso.uiuc.edu (internet)   hart@uiucvmd   (bitnet)
+
+We would prefer to send you this information by email
+(Internet, Bitnet, Compuserve, ATTMAIL or MCImail).
+
+******
+If you have an FTP program (or emulator), please
+FTP directly to the Project Gutenberg archives:
+[Mac users, do NOT point and click. . .type]
+
+ftp mrcnext.cso.uiuc.edu
+login:  anonymous
+password:  your@login
+cd etext/etext91
+or cd etext92
+or cd etext93 [for new books]  [now also in cd etext/etext93]
+or cd etext/articles [get suggest gut for more information]
+dir [to see files]
+get or mget [to get files. . .set bin for zip files]
+GET 0INDEX.GUT
+for a list of books
+and
+GET NEW GUT for general information
+and
+MGET GUT* for newsletters.
+
+**Information prepared by the Project Gutenberg legal advisor**
+(Three Pages)
+
+
+***START**THE SMALL PRINT!**FOR PUBLIC DOMAIN ETEXTS**START***
+Why is this "Small Print!" statement here?  You know: lawyers.
+They tell us you might sue us if there is something wrong with
+your copy of this etext, even if you got it for free from
+someone other than us, and even if what's wrong is not our
+fault.  So, among other things, this "Small Print!" statement
+disclaims most of our liability to you.  It also tells you how
+you can distribute copies of this etext if you want to.
+
+*BEFORE!* YOU USE OR READ THIS ETEXT
+By using or reading any part of this PROJECT GUTENBERG-tm
+etext, you indicate that you understand, agree to and accept
+this "Small Print!" statement.  If you do not, you can receive
+a refund of the money (if any) you paid for this etext by
+sending a request within 30 days of receiving it to the person
+you got it from.  If you received this etext on a physical
+medium (such as a disk), you must return it with your request.
+
+ABOUT PROJECT GUTENBERG-TM ETEXTS
+This PROJECT GUTENBERG-tm etext, like most PROJECT GUTENBERG-
+tm etexts, is a "public domain" work distributed by Professor
+Michael S. Hart through the Project Gutenberg Association at
+Illinois Benedictine College (the "Project").  Among other
+things, this means that no one owns a United States copyright
+on or for this work, so the Project (and you!) can copy and
+distribute it in the United States without permission and
+without paying copyright royalties.  Special rules, set forth
+below, apply if you wish to copy and distribute this etext
+under the Project's "PROJECT GUTENBERG" trademark.
+
+To create these etexts, the Project expends considerable
+efforts to identify, transcribe and proofread public domain
+works.  Despite these efforts, the Project's etexts and any
+medium they may be on may contain "Defects".  Among other
+things, Defects may take the form of incomplete, inaccurate or
+corrupt data, transcription errors, a copyright or other
+intellectual property infringement, a defective or damaged
+disk or other etext medium, a computer virus, or computer
+codes that damage or cannot be read by your equipment.
+
+LIMITED WARRANTY; DISCLAIMER OF DAMAGES
+But for the "Right of Replacement or Refund" described below,
+[1] the Project (and any other party you may receive this
+etext from as a PROJECT GUTENBERG-tm etext) disclaims all
+liability to you for damages, costs and expenses, including
+legal fees, and [2] YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
+UNDER STRICT LIABILITY, OR FOR BREACH OF WARRANTY OR CONTRACT,
+INCLUDING BUT NOT LIMITED TO INDIRECT, CONSEQUENTIAL, PUNITIVE
+OR INCIDENTAL DAMAGES, EVEN IF YOU GIVE NOTICE OF THE
+POSSIBILITY OF SUCH DAMAGES.
+
+If you discover a Defect in this etext within 90 days of
+receiving it, you can receive a refund of the money (if any)
+you paid for it by sending an explanatory note within that
+time to the person you received it from.  If you received it
+on a physical medium, you must return it with your note, and
+such person may choose to alternatively give you a replacement
+copy.  If you received it electronically, such person may
+choose to alternatively give you a second opportunity to
+receive it electronically.
+
+THIS ETEXT IS OTHERWISE PROVIDED TO YOU "AS-IS".  NO OTHER
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARE MADE TO YOU AS
+TO THE ETEXT OR ANY MEDIUM IT MAY BE ON, INCLUDING BUT NOT
+LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Some states do not allow disclaimers of implied warranties or
+the exclusion or limitation of consequential damages, so the
+above disclaimers and exclusions may not apply to you, and you
+may have other legal rights.
+
+INDEMNITY
+You will indemnify and hold the Project, its directors,
+officers, members and agents harmless from all liability, cost
+and expense, including legal fees, that arise directly or
+indirectly from any of the following that you do or cause:
+[1] distribution of this etext, [2] alteration, modification,
+or addition to the etext, or [3] any Defect.
+
+DISTRIBUTION UNDER "PROJECT GUTENBERG-tm"
+You may distribute copies of this etext electronically, or by
+disk, book or any other medium if you either delete this
+"Small Print!" and all other references to Project Gutenberg,
+or:
+
+[1]  Only give exact copies of it.  Among other things, this
+     requires that you do not remove, alter or modify the
+     etext or this "small print!" statement.  You may however,
+     if you wish, distribute this etext in machine readable
+     binary, compressed, mark-up, or proprietary form,
+     including any form resulting from conversion by word pro-
+     cessing or hypertext software, but only so long as
+     *EITHER*:
+
+     [*]  The etext, when displayed, is clearly readable, and
+          does *not* contain characters other than those
+          intended by the author of the work, although tilde
+          (~), asterisk (*) and underline (_) characters may
+          be used to convey punctuation intended by the
+          author, and additional characters may be used to
+          indicate hypertext links; OR
+
+     [*]  The etext may be readily converted by the reader at
+          no expense into plain ASCII, EBCDIC or equivalent
+          form by the program that displays the etext (as is
+          the case, for instance, with most word processors);
+          OR
+
+     [*]  You provide, or agree to also provide on request at
+          no additional cost, fee or expense, a copy of the
+          etext in its original plain ASCII form (or in EBCDIC
+          or other equivalent proprietary form).
+
+[2]  Honor the etext refund and replacement provisions of this
+     "Small Print!" statement.
+
+[3]  Pay a trademark license fee to the Project of 20% of the
+     net profits you derive calculated using the method you
+     already use to calculate your applicable taxes.  If you
+     don't derive profits, no royalty is due.  Royalties are
+     payable to "Project Gutenberg Association / Illinois
+     Benedictine College" within the 60 days following each
+     date you prepare (or were legally required to prepare)
+     your annual (or equivalent periodic) tax return.
+
+WHAT IF YOU *WANT* TO SEND MONEY EVEN IF YOU DON'T HAVE TO?
+The Project gratefully accepts contributions in money, time,
+scanning machines, OCR software, public domain etexts, royalty
+free copyright licenses, and every other sort of contribution
+you can think of.  Money should be paid to "Project Gutenberg
+Association / Illinois Benedictine College".
+
+This "Small Print!" by Charles B. Kramer, Attorney
+Internet (72600.2026@compuserve.com); TEL: (212-254-5093)
+*END*THE SMALL PRINT! FOR PUBLIC DOMAIN ETEXTS*Ver.04.29.93*END*
+
+
+
+
+                ALICE'S ADVENTURES IN WONDERLAND
+
+                          Lewis Carroll
+
+               THE MILLENNIUM FULCRUM EDITION 3.0
+
+
+
+
+                            CHAPTER I
+
+                      Down the Rabbit-Hole
+
+
+  Alice was beginning to get very tired of sitting by her sister
+on the bank, and of having nothing to do:  once or twice she had
+peeped into the book her sister was reading, but it had no
+pictures or conversations in it, `and what is the use of a book,'
+thought Alice `without pictures or conversation?'
+
+  So she was considering in her own mind (as well as she could,
+for the hot day made her feel very sleepy and stupid), whether
+the pleasure of making a daisy-chain would be worth the trouble
+of getting up and picking the daisies, when suddenly a White
+Rabbit with pink eyes ran close by her.
+
+  There was nothing so VERY remarkable in that; nor did Alice
+think it so VERY much out of the way to hear the Rabbit say to
+itself, `Oh dear!  Oh dear!  I shall be late!'  (when she thought
+it over afterwards, it occurred to her that she ought to have
+wondered at this, but at the time it all seemed quite natural);
+but when the Rabbit actually TOOK A WATCH OUT OF ITS WAISTCOAT-
+POCKET, and looked at it, and then hurried on, Alice started to
+her feet, for it flashed across her mind that she had never
+before seen a rabbit with either a waistcoat-pocket, or a watch to
+take out of it, and burning with curiosity, she ran across the
+field after it, and fortunately was just in time to see it pop
+down a large rabbit-hole under the hedge.
+
+  In another moment down went Alice after it, never once
+considering how in the world she was to get out again.
+
+  The rabbit-hole went straight on like a tunnel for some way,
+and then dipped suddenly down, so suddenly that Alice had not a
+moment to think about stopping herself before she found herself
+falling down a very deep well.
+
+  Either the well was very deep, or she fell very slowly, for she
+had plenty of time as she went down to look about her and to
+wonder what was going to happen next.  First, she tried to look
+down and make out what she was coming to, but it was too dark to
+see anything; then she looked at the sides of the well, and
+noticed that they were filled with cupboards and book-shelves;
+here and there she saw maps and pictures hung upon pegs.  She
+took down a jar from one of the shelves as she passed; it was
+labelled `ORANGE MARMALADE', but to her great disappointment it
+was empty:  she did not like to drop the jar for fear of killing
+somebody, so managed to put it into one of the cupboards as she
+fell past it.
+
+  `Well!' thought Alice to herself, `after such a fall as this, I
+shall think nothing of tumbling down stairs!  How brave they'll
+all think me at home!  Why, I wouldn't say anything about it,
+even if I fell off the top of the house!' (Which was very likely
+true.)
+
+  Down, down, down.  Would the fall NEVER come to an end!  `I
+wonder how many miles I've fallen by this time?' she said aloud.
+`I must be getting somewhere near the centre of the earth.  Let
+me see:  that would be four thousand miles down, I think--' (for,
+you see, Alice had learnt several things of this sort in her
+lessons in the schoolroom, and though this was not a VERY good
+opportunity for showing off her knowledge, as there was no one to
+listen to her, still it was good practice to say it over) `--yes,
+that's about the right distance--but then I wonder what Latitude
+or Longitude I've got to?'  (Alice had no idea what Latitude was,
+or Longitude either, but thought they were nice grand words to
+say.)
+
+  Presently she began again.  `I wonder if I shall fall right
+THROUGH the earth!  How funny it'll seem to come out among the
+people that walk with their heads downward!  The Antipathies, I
+think--' (she was rather glad there WAS no one listening, this
+time, as it didn't sound at all the right word) `--but I shall
+have to ask them what the name of the country is, you know.
+Please, Ma'am, is this New Zealand or Australia?' (and she tried
+to curtsey as she spoke--fancy CURTSEYING as you're falling
+through the air!  Do you think you could manage it?)  `And what
+an ignorant little girl she'll think me for asking!  No, it'll
+never do to ask:  perhaps I shall see it written up somewhere.'
+
+  Down, down, down.  There was nothing else to do, so Alice soon
+began talking again.  `Dinah'll miss me very much to-night, I
+should think!'  (Dinah was the cat.)  `I hope they'll remember
+her saucer of milk at tea-time.  Dinah my dear!  I wish you were
+down here with me!  There are no mice in the air, I'm afraid, but
+you might catch a bat, and that's very like a mouse, you know.
+But do cats eat bats, I wonder?'  And here Alice began to get
+rather sleepy, and went on saying to herself, in a dreamy sort of
+way, `Do cats eat bats?  Do cats eat bats?' and sometimes, `Do
+bats eat cats?' for, you see, as she couldn't answer either
+question, it didn't much matter which way she put it.  She felt
+that she was dozing off, and had just begun to dream that she
+was walking hand in hand with Dinah, and saying to her very
+earnestly, `Now, Dinah, tell me the truth:  did you ever eat a
+bat?' when suddenly, thump! thump! down she came upon a heap of
+sticks and dry leaves, and the fall was over.
+
+  Alice was not a bit hurt, and she jumped up on to her feet in a
+moment:  she looked up, but it was all dark overhead; before her
+was another long passage, and the White Rabbit was still in
+sight, hurrying down it.  There was not a moment to be lost:
+away went Alice like the wind, and was just in time to hear it
+say, as it turned a corner, `Oh my ears and whiskers, how late
+it's getting!'  She was close behind it when she turned the
+corner, but the Rabbit was no longer to be seen:  she found
+herself in a long, low hall, which was lit up by a row of lamps
+hanging from the roof.
+
+  There were doors all round the hall, but they were all locked;
+and when Alice had been all the way down one side and up the
+other, trying every door, she walked sadly down the middle,
+wondering how she was ever to get out again.
+
+  Suddenly she came upon a little three-legged table, all made of
+solid glass; there was nothing on it except a tiny golden key,
+and Alice's first thought was that it might belong to one of the
+doors of the hall; but, alas! either the locks were too large, or
+the key was too small, but at any rate it would not open any of
+them.  However, on the second time round, she came upon a low
+curtain she had not noticed before, and behind it was a little
+door about fifteen inches high:  she tried the little golden key
