@@ -2,11 +2,12 @@ package com.learn.corejava.VolumeⅠ.ch5.inheritance;
 
 import com.learn.corejava.VolumeⅠ.ch4.Employee;
 
+/**
+ * @author HP
+ */
 public class Manager extends Employee {
-    public double getBonus() {
-        return bonus;
-    }
 
+    private Employee secretary;
     private double bonus;
     /**
      * @param name the employee's name
@@ -25,8 +26,20 @@ public class Manager extends Employee {
         return super.getSalary() + bonus;
     }
 
+    public double getBonus() {
+        return bonus;
+    }
+
     public void setBonus(double b) {
         bonus = b;
+    }
+
+    public Employee getSecretary() {
+        return secretary;
+    }
+
+    public void setSecretary(Employee secretary) {
+        this.secretary = secretary;
     }
 
     @Override

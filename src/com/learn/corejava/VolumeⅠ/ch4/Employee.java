@@ -1,5 +1,6 @@
 package com.learn.corejava.VolumeⅠ.ch4;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
 import java.util.Random;
@@ -7,7 +8,7 @@ import java.util.Random;
 /**
  * @author HP
  */
-public class Employee implements Comparable<Employee>, Cloneable {
+public class Employee implements Comparable<Employee>, Cloneable, Serializable {
     private static int nextId = 1;
 
     private String name = "";
