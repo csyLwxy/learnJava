@@ -189,7 +189,7 @@ public static Comparable min(Comparable[] a)
 
 ## 泛型类型的继承规则
 
-![泛型的继承](%20resource/pair.png)
+![泛型的继承](resource/pair.png)
 
 ## 通配符类型
 
@@ -218,7 +218,7 @@ public static void printBuddies(Pair<? extends Employee> p)
 ```
 
 类型 Pair<Manager> 时 Pair<? extends Employee> 的子类型
-![使用通配符的子类型关系](%20resource/wildcard.png)
+![使用通配符的子类型关系](resource/wildcard.png)
 
 ### 通配符的超限定
 
